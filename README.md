@@ -2,8 +2,6 @@
 
 A simple app that answers questions about company annual reports (PDF files). You ask a question, the app finds the matching parts of the reports, and an AI writes the answer from them.
 
-![Financial Research Assistant UI](docs/screenshot.png)
-
 ## What it does
 
 - Reads PDF reports and saves them in a searchable database.
