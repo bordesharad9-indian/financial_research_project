@@ -1,4 +1,3 @@
-
 import os
 
 from langchain_groq import ChatGroq
@@ -15,7 +14,7 @@ class GroqLLM:
 
     def __init__(
         self,
-        model_name: str = "gemma2-9b-it",
+        model_name: str = "openai/gpt-oss-20b",
         api_key: str = None
     ):
 
@@ -35,7 +34,7 @@ class GroqLLM:
             groq_api_key=self.api_key,
             model_name=self.model_name,
             temperature=0.1,
-            max_tokens=1024,
+            max_tokens=2048,
             timeout=60,
             max_retries=2
         )
@@ -133,11 +132,7 @@ class GroqLLM:
 
             print(f"Groq API Error: {e}")
 
-            return (
-                "Unable to generate response. "
-                "Please check your Groq API key, "
-                "internet connection, and model availability."
-            )
+            return f"Unable to generate response: {e}"
 
 if __name__ == "__main__":
 

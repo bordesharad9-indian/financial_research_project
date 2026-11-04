@@ -162,6 +162,4 @@ if __name__ == "__main__":
     query = "What are the key financial highlights in the annual reports?"
 
     answer = pipeline.run_query(query)
-
-    print("\n--- Answer ---")
     print(answer)
